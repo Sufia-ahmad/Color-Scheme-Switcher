@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Switcher</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+            margin: 0;
+            transition: background-color 0.5s ease;
+            flex-direction: column; 
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .color-box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #box1 { background-color: red; }
+        #box2 { background-color: green; }
+        #box3 { background-color: blue; }
+        #box4 { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div id="box1" class="color-box" onclick="changeBackgroundColor('red')"></div>
+        <div id="box2" class="color-box" onclick="changeBackgroundColor('green')"></div>
+        <div id="box3" class="color-box" onclick="changeBackgroundColor('blue')"></div>
+    </div>
+    <div class="row">
+        <div id="box4" class="color-box" onclick="changeBackgroundColor('yellow')"></div>
+    </div>
+
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
+
+
